@@ -14,6 +14,20 @@
 		3F80A27F1A1FB610005FD707 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F80A27E1A1FB610005FD707 /* Images.xcassets */; };
 		3F80A2821A1FB610005FD707 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F80A2801A1FB610005FD707 /* LaunchScreen.xib */; };
 		3F80A28E1A1FB610005FD707 /* NavProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F80A28D1A1FB610005FD707 /* NavProjectTests.m */; };
+		3F80A29A1A1FB63E005FD707 /* GoogleOpenSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F80A2971A1FB63E005FD707 /* GoogleOpenSource.framework */; };
+		3F80A29B1A1FB63E005FD707 /* GooglePlus.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3F80A2981A1FB63E005FD707 /* GooglePlus.bundle */; };
+		3F80A29C1A1FB63E005FD707 /* GooglePlus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F80A2991A1FB63E005FD707 /* GooglePlus.framework */; };
+		3F80A29E1A1FB673005FD707 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F80A29D1A1FB673005FD707 /* AddressBook.framework */; };
+		3F80A2A01A1FB67F005FD707 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F80A29F1A1FB67F005FD707 /* AssetsLibrary.framework */; };
+		3F80A2A21A1FB684005FD707 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F80A2A11A1FB684005FD707 /* Foundation.framework */; };
+		3F80A2A41A1FB68C005FD707 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F80A2A31A1FB68C005FD707 /* CoreLocation.framework */; };
+		3F80A2A61A1FB693005FD707 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F80A2A51A1FB693005FD707 /* CoreMotion.framework */; };
+		3F80A2A81A1FB69B005FD707 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F80A2A71A1FB69B005FD707 /* CoreGraphics.framework */; };
+		3F80A2AA1A1FB6A1005FD707 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F80A2A91A1FB6A1005FD707 /* CoreText.framework */; };
+		3F80A2AC1A1FB6A9005FD707 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F80A2AB1A1FB6A9005FD707 /* MediaPlayer.framework */; };
+		3F80A2AE1A1FB6AF005FD707 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F80A2AD1A1FB6AF005FD707 /* Security.framework */; };
+		3F80A2B01A1FB6B7005FD707 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F80A2AF1A1FB6B7005FD707 /* SystemConfiguration.framework */; };
+		3F80A2B21A1FB6BD005FD707 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F80A2B11A1FB6BD005FD707 /* UIKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +54,20 @@
 		3F80A2871A1FB610005FD707 /* NavProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NavProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F80A28C1A1FB610005FD707 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F80A28D1A1FB610005FD707 /* NavProjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NavProjectTests.m; sourceTree = "<group>"; };
+		3F80A2971A1FB63E005FD707 /* GoogleOpenSource.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleOpenSource.framework; sourceTree = "<group>"; };
+		3F80A2981A1FB63E005FD707 /* GooglePlus.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GooglePlus.bundle; sourceTree = "<group>"; };
+		3F80A2991A1FB63E005FD707 /* GooglePlus.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GooglePlus.framework; sourceTree = "<group>"; };
+		3F80A29D1A1FB673005FD707 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		3F80A29F1A1FB67F005FD707 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		3F80A2A11A1FB684005FD707 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3F80A2A31A1FB68C005FD707 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		3F80A2A51A1FB693005FD707 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		3F80A2A71A1FB69B005FD707 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3F80A2A91A1FB6A1005FD707 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		3F80A2AB1A1FB6A9005FD707 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		3F80A2AD1A1FB6AF005FD707 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		3F80A2AF1A1FB6B7005FD707 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		3F80A2B11A1FB6BD005FD707 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +75,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F80A2B21A1FB6BD005FD707 /* UIKit.framework in Frameworks */,
+				3F80A2B01A1FB6B7005FD707 /* SystemConfiguration.framework in Frameworks */,
+				3F80A2AE1A1FB6AF005FD707 /* Security.framework in Frameworks */,
+				3F80A2AC1A1FB6A9005FD707 /* MediaPlayer.framework in Frameworks */,
+				3F80A2AA1A1FB6A1005FD707 /* CoreText.framework in Frameworks */,
+				3F80A2A81A1FB69B005FD707 /* CoreGraphics.framework in Frameworks */,
+				3F80A2A61A1FB693005FD707 /* CoreMotion.framework in Frameworks */,
+				3F80A2A41A1FB68C005FD707 /* CoreLocation.framework in Frameworks */,
+				3F80A2A21A1FB684005FD707 /* Foundation.framework in Frameworks */,
+				3F80A2A01A1FB67F005FD707 /* AssetsLibrary.framework in Frameworks */,
+				3F80A29E1A1FB673005FD707 /* AddressBook.framework in Frameworks */,
+				3F80A29A1A1FB63E005FD707 /* GoogleOpenSource.framework in Frameworks */,
+				3F80A29C1A1FB63E005FD707 /* GooglePlus.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +104,20 @@
 		3F80A2651A1FB610005FD707 = {
 			isa = PBXGroup;
 			children = (
+				3F80A2B11A1FB6BD005FD707 /* UIKit.framework */,
+				3F80A2AF1A1FB6B7005FD707 /* SystemConfiguration.framework */,
+				3F80A2AD1A1FB6AF005FD707 /* Security.framework */,
+				3F80A2AB1A1FB6A9005FD707 /* MediaPlayer.framework */,
+				3F80A2A91A1FB6A1005FD707 /* CoreText.framework */,
+				3F80A2A71A1FB69B005FD707 /* CoreGraphics.framework */,
+				3F80A2A51A1FB693005FD707 /* CoreMotion.framework */,
+				3F80A2A31A1FB68C005FD707 /* CoreLocation.framework */,
+				3F80A2A11A1FB684005FD707 /* Foundation.framework */,
+				3F80A29F1A1FB67F005FD707 /* AssetsLibrary.framework */,
+				3F80A29D1A1FB673005FD707 /* AddressBook.framework */,
+				3F80A2971A1FB63E005FD707 /* GoogleOpenSource.framework */,
+				3F80A2981A1FB63E005FD707 /* GooglePlus.bundle */,
+				3F80A2991A1FB63E005FD707 /* GooglePlus.framework */,
 				3F80A2701A1FB610005FD707 /* NavProject */,
 				3F80A28A1A1FB610005FD707 /* NavProjectTests */,
 				3F80A26F1A1FB610005FD707 /* Products */,
@@ -201,6 +256,7 @@
 			files = (
 				3F80A27D1A1FB610005FD707 /* Main.storyboard in Resources */,
 				3F80A2821A1FB610005FD707 /* LaunchScreen.xib in Resources */,
+				3F80A29B1A1FB63E005FD707 /* GooglePlus.bundle in Resources */,
 				3F80A27F1A1FB610005FD707 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -345,8 +401,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = NavProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -355,8 +416,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = NavProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

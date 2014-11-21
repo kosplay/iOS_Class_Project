@@ -7,9 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <GooglePlus/GooglePlus.h>
+#import <GoogleOpenSource/GoogleOpenSource.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <GPPSignInDelegate>
+
+@property (retain,nonatomic) IBOutlet GPPSignInButton *signInButton;
 
 
 @end
+
+@class GPPSignInButton;
 
