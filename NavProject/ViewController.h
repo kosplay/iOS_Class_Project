@@ -9,13 +9,15 @@
 #import <UIKit/UIKit.h>
 #import <GooglePlus/GooglePlus.h>
 #import <GoogleOpenSource/GoogleOpenSource.h>
+#import <FacebookSDK/FacebookSDK.h>
 
-@interface ViewController : UIViewController <GPPSignInDelegate>
+@class GPPSignInButton;
+@interface ViewController : UIViewController <GPPSignInDelegate, FBLoginViewDelegate>
 
 @property (retain,nonatomic) IBOutlet GPPSignInButton *signInButton;
+@property (weak, nonatomic) IBOutlet FBLoginView *fbLogInView;
 
 
 @end
 
-@class GPPSignInButton;
 

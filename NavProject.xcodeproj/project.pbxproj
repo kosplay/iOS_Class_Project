@@ -28,6 +28,7 @@
 		3F80A2AE1A1FB6AF005FD707 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F80A2AD1A1FB6AF005FD707 /* Security.framework */; };
 		3F80A2B01A1FB6B7005FD707 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F80A2AF1A1FB6B7005FD707 /* SystemConfiguration.framework */; };
 		3F80A2B21A1FB6BD005FD707 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F80A2B11A1FB6BD005FD707 /* UIKit.framework */; };
+		3F80A2B41A1FD4E9005FD707 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F80A2B31A1FD4E9005FD707 /* FacebookSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		3F80A2AD1A1FB6AF005FD707 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		3F80A2AF1A1FB6B7005FD707 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		3F80A2B11A1FB6BD005FD707 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3F80A2B31A1FD4E9005FD707 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 				3F80A29E1A1FB673005FD707 /* AddressBook.framework in Frameworks */,
 				3F80A29A1A1FB63E005FD707 /* GoogleOpenSource.framework in Frameworks */,
 				3F80A29C1A1FB63E005FD707 /* GooglePlus.framework in Frameworks */,
+				3F80A2B41A1FD4E9005FD707 /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +107,7 @@
 		3F80A2651A1FB610005FD707 = {
 			isa = PBXGroup;
 			children = (
+				3F80A2B31A1FD4E9005FD707 /* FacebookSDK.framework */,
 				3F80A2B11A1FB6BD005FD707 /* UIKit.framework */,
 				3F80A2AF1A1FB6B7005FD707 /* SystemConfiguration.framework */,
 				3F80A2AD1A1FB6AF005FD707 /* Security.framework */,

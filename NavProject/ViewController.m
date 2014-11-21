@@ -22,6 +22,8 @@ static NSString * const kClientID =
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+    self.signInButton.style = kGPPSignInButtonStyleIconOnly;
+    
     //now check of mac account or google+ account, if exist, use it, showing using it.
     GPPSignIn *signIn = [GPPSignIn sharedInstance];
     signIn.shouldFetchGooglePlusUser = YES;
@@ -30,6 +32,12 @@ static NSString * const kClientID =
     signIn.scopes = @[ @"profile"];
     signIn.delegate = self;
     [signIn trySilentAuthentication];//hmm, default?
+    
+    
+    //Facebook login
+    [FBLoginView class];
+    self.fbLogInView.readPermissions = @[@"public_profile", @"email", @"user_friends"];
+    self.fbLogInView.delegate = self;
 }
 
 //google+ signin handler
@@ -65,7 +73,7 @@ static NSString * const kClientID =
     [[GPPSignIn sharedInstance] disconnect];
 }
 
-//disconnect handler
+//google+ disconnect handler
 - (void)didDisconnectWithError:(NSError *)error {
     if (error) {
         NSLog(@"Received error %@", error);
@@ -78,6 +86,24 @@ static NSString * const kClientID =
 //google+ sign out
 - (void)signOut {
     [[GPPSignIn sharedInstance] signOut];
+}
+
+
+//facebook login handler
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation {
+    // attempt to extract a token from the url
+    return [FBAppCall handleOpenURL:url sourceApplication:sourceApplication];
+}
+
+//Facebook loged in callback: This method will be called when the user information has been fetched
+- (void)loginViewFetchedUserInfo:(FBLoginView *)loginView
+                            user:(id<FBGraphUser>)user {
+    NSLog(@"User: %@ ProfileID: %@\n",user.name, user.id);
+    //self.profilePictureView.profileID = user.id;
+    //self.nameLabel.text = user.name;
 }
 
 - (void)didReceiveMemoryWarning {
