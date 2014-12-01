@@ -484,6 +484,7 @@
 				3F80A2931A1FB610005FD707 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3F80A2941A1FB610005FD707 /* Build configuration list for PBXNativeTarget "NavProjectTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +493,7 @@
 				3F80A2961A1FB610005FD707 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

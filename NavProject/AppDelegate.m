@@ -20,6 +20,7 @@
     return YES;
 }
 
+// Handling the Response from the Facebook app
 - (BOOL)application: (UIApplication *)application
             openURL: (NSURL *)url
   sourceApplication: (NSString *)sourceApplication

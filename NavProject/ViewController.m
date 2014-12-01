@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "AppDelegate.h"
 
 @interface ViewController ()
 
@@ -16,7 +17,7 @@
 
 //google+ client id
 static NSString * const kClientID =
-@"64822825912-fthif228jdpjjthdcfj61p46idlhc6t0.apps.googleusercontent.com";
+@"1043672885379-7mj8d2vsapira1qt1bpgkpjnsskea8qk.apps.googleusercontent.com";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -25,13 +26,13 @@ static NSString * const kClientID =
     self.signInButton.style = kGPPSignInButtonStyleIconOnly;
     
     //now check of mac account or google+ account, if exist, use it, showing using it.
-    GPPSignIn *signIn = [GPPSignIn sharedInstance];
-    signIn.shouldFetchGooglePlusUser = YES;
-    signIn.shouldFetchGoogleUserEmail = YES;
-    signIn.clientID = kClientID;
-    signIn.scopes = @[ @"profile"];
-    signIn.delegate = self;
-    [signIn trySilentAuthentication];//hmm, default?
+    self.gppSignIn = [GPPSignIn sharedInstance];
+    self.gppSignIn.shouldFetchGooglePlusUser = YES;
+    self.gppSignIn.shouldFetchGoogleUserEmail = YES;
+    self.gppSignIn.clientID = kClientID;
+    self.gppSignIn.scopes = @[ @"profile"];
+    self.gppSignIn.delegate = self;
+    [self.gppSignIn trySilentAuthentication];//hmm, default?
     
     
     //Facebook login
@@ -49,6 +50,14 @@ static NSString * const kClientID =
     }
     
     //if no error, direct to next screen
+    
+    //push data to appdeleagte
+    //not sure if this is right or not
+    AppDelegate *appdelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    appdelegate.googleplus = self.gppSignIn;
+    
+    //present home screen
+    [self presentHomeScreen];
 }
 
 //google+ sign in refresh
@@ -65,7 +74,7 @@ static NSString * const kClientID =
 
 - (void)presentSignInViewController:(UIViewController *)viewController {
     // This is an example of how you can implement it if your app is navigation-based.
-    [[self navigationController] pushViewController:viewController animated:YES];
+    //[[self navigationController] pushViewController:viewController animated:YES];
 }
 
 //google+ disconnect app from google+
@@ -104,6 +113,19 @@ static NSString * const kClientID =
     NSLog(@"User: %@ ProfileID: %@\n",user.name, user.id);
     //self.profilePictureView.profileID = user.id;
     //self.nameLabel.text = user.name;
+    
+    //push data to appdeleagte
+    
+        //havent figure out this yet. don't even bother unless need it later
+    
+    
+    //present home screen
+    [self presentHomeScreen];
+}
+
+//to preset homescreen on successful login
+-(void) presentHomeScreen {
+    //[self presentViewController:<#(UIViewController *)#> animated:<#(BOOL)#> completion:<#^(void)completion#>];
 }
 
 - (void)didReceiveMemoryWarning {
