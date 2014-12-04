@@ -37,29 +37,10 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
-        <!--Item 2-->
-        <scene sceneID="SNB-yB-LLQ">
-            <objects>
-                <viewController id="QZa-Qj-VJa" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="ByV-bc-MI4"/>
-                        <viewControllerLayoutGuide type="bottom" id="kFn-Xu-c9i"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="JE7-Z0-Buo">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="WWb-Ge-TcM"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YFm-Iq-ZUw" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1920" y="738"/>
-        </scene>
-        <!--Item 1-->
+        <!--Notifications-->
         <scene sceneID="sDI-G2-qaQ">
             <objects>
-                <viewController id="hHw-hH-4SO" customClass="GroceryVC" sceneMemberID="viewController">
+                <viewController id="hHw-hH-4SO" customClass="NotificationVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="yq5-fu-g7N"/>
                         <viewControllerLayoutGuide type="bottom" id="bk5-Am-ULb"/>
@@ -67,18 +48,86 @@
                     <view key="view" contentMode="scaleToFill" id="V9f-eI-Yi3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Notifications" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SUG-wH-eDk">
+                                <rect key="frame" x="137" y="20" width="96" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="This is where notifications show up." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BjP-Bk-waE">
+                                <rect key="frame" x="49" y="289" width="273" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="aW7-gE-KVF"/>
+                    <tabBarItem key="tabBarItem" title="Notifications" id="aW7-gE-KVF"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qgM-Xh-kQq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1920" y="76"/>
         </scene>
+        <!--Grocery List-->
+        <scene sceneID="zip-Qh-ePE">
+            <objects>
+                <tableViewController id="H8f-Md-Dvg" customClass="GroceryTableVC" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="H54-XW-EFc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KUm-mL-l4O">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KUm-mL-l4O" id="ZEo-Ke-ZE7">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="H8f-Md-Dvg" id="6ta-yF-wAv"/>
+                            <outlet property="delegate" destination="H8f-Md-Dvg" id="wUL-TV-JFT"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Grocery List" id="RIG-Da-OCU"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XU7-jQ-GLC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1920" y="749"/>
+        </scene>
+        <!--Friends-->
+        <scene sceneID="m7b-8P-h1e">
+            <objects>
+                <tableViewController id="XtX-Yb-NAx" customClass="FriendTableVC" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="8OG-SI-Gcm">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="cMt-Xf-Tv4">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cMt-Xf-Tv4" id="Iu9-zl-bH5">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="XtX-Yb-NAx" id="Zi4-M6-UsP"/>
+                            <outlet property="delegate" destination="XtX-Yb-NAx" id="b8Y-jI-Ok8"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Friends" id="f5W-vS-Ykx"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iEX-Q8-vaC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1920" y="1411"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="wFG-ad-Wf4">
             <objects>
-                <tabBarController id="RIE-fC-yzd" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="RIE-fC-yzd" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="Jou-AM-HvW">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
@@ -87,7 +136,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="hHw-hH-4SO" kind="relationship" relationship="viewControllers" id="Flx-IR-gNh"/>
-                        <segue destination="QZa-Qj-VJa" kind="relationship" relationship="viewControllers" id="euI-o2-J75"/>
+                        <segue destination="H8f-Md-Dvg" kind="relationship" relationship="viewControllers" id="hLW-dm-L4w"/>
+                        <segue destination="XtX-Yb-NAx" kind="relationship" relationship="viewControllers" id="PG6-jT-2un"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zUQ-cb-UpE" userLabel="First Responder" sceneMemberID="firstResponder"/>

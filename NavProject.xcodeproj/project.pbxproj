@@ -32,6 +32,9 @@
 		3FCEF6FE1A2E6F97009B85BC /* GroceryItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FCEF6FD1A2E6F97009B85BC /* GroceryItem.m */; };
 		3FCEF7011A2E7AF5009B85BC /* Friend.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FCEF7001A2E7AF5009B85BC /* Friend.m */; };
 		3FCEF7041A2E7BB7009B85BC /* GroceryList.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FCEF7031A2E7BB7009B85BC /* GroceryList.m */; };
+		3FF8281A1A310C7E00E0E031 /* NotificationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF828191A310C7E00E0E031 /* NotificationVC.m */; };
+		3FF8281D1A31145A00E0E031 /* GroceryTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF8281C1A31145A00E0E031 /* GroceryTableVC.m */; };
+		3FF828201A31149700E0E031 /* FriendTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF8281F1A31149700E0E031 /* FriendTableVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +82,12 @@
 		3FCEF7001A2E7AF5009B85BC /* Friend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Friend.m; sourceTree = "<group>"; };
 		3FCEF7021A2E7BB7009B85BC /* GroceryList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroceryList.h; sourceTree = "<group>"; };
 		3FCEF7031A2E7BB7009B85BC /* GroceryList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroceryList.m; sourceTree = "<group>"; };
+		3FF828181A310C7E00E0E031 /* NotificationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationVC.h; sourceTree = "<group>"; };
+		3FF828191A310C7E00E0E031 /* NotificationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationVC.m; sourceTree = "<group>"; };
+		3FF8281B1A31145A00E0E031 /* GroceryTableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroceryTableVC.h; sourceTree = "<group>"; };
+		3FF8281C1A31145A00E0E031 /* GroceryTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroceryTableVC.m; sourceTree = "<group>"; };
+		3FF8281E1A31149700E0E031 /* FriendTableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendTableVC.h; sourceTree = "<group>"; };
+		3FF8281F1A31149700E0E031 /* FriendTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendTableVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +172,12 @@
 				3FCEF6FF1A2E7AF5009B85BC /* Friend.h */,
 				3FCEF7001A2E7AF5009B85BC /* Friend.m */,
 				3F80A2711A1FB610005FD707 /* Supporting Files */,
+				3FF828181A310C7E00E0E031 /* NotificationVC.h */,
+				3FF828191A310C7E00E0E031 /* NotificationVC.m */,
+				3FF8281B1A31145A00E0E031 /* GroceryTableVC.h */,
+				3FF8281C1A31145A00E0E031 /* GroceryTableVC.m */,
+				3FF8281E1A31149700E0E031 /* FriendTableVC.h */,
+				3FF8281F1A31149700E0E031 /* FriendTableVC.m */,
 			);
 			path = NavProject;
 			sourceTree = "<group>";
@@ -296,10 +311,13 @@
 			files = (
 				3F80A27A1A1FB610005FD707 /* ViewController.m in Sources */,
 				3FCEF6FE1A2E6F97009B85BC /* GroceryItem.m in Sources */,
+				3FF828201A31149700E0E031 /* FriendTableVC.m in Sources */,
 				3F80A2771A1FB610005FD707 /* AppDelegate.m in Sources */,
 				3FCEF7011A2E7AF5009B85BC /* Friend.m in Sources */,
+				3FF8281A1A310C7E00E0E031 /* NotificationVC.m in Sources */,
 				3F80A2741A1FB610005FD707 /* main.m in Sources */,
 				3FCEF7041A2E7BB7009B85BC /* GroceryList.m in Sources */,
+				3FF8281D1A31145A00E0E031 /* GroceryTableVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

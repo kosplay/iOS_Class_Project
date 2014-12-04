@@ -125,7 +125,10 @@ static NSString * const kClientID =
 
 //to preset homescreen on successful login
 -(void) presentHomeScreen {
-    //[self presentViewController:<#(UIViewController *)#> animated:<#(BOOL)#> completion:<#^(void)completion#>];
+    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main"
+                                                             bundle: nil];
+    UITabBarController *tabBarVC = (UITabBarController *)[mainStoryboard instantiateViewControllerWithIdentifier:@"TabBarVC"];
+    [self presentViewController:tabBarVC animated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {
