@@ -7,7 +7,37 @@
 //
 
 #import "GroceryList.h"
+#import "Friend.h"
+#import "GroceryItem.h"
 
 @implementation GroceryList
+
+-(void) addPayer:(Friend *)friend {
+    [self.payers addObject:friend];
+}
+
+-(Friend *) containsPayer:(NSString *)payerName {
+    return nil;
+}
+
+-(void) removePayer:(Friend *)friend {
+    if( [self.payers containsObject:friend] ){
+        [self.payers removeObject:friend];
+    }
+}
+
+-(void) addItem:(GroceryItem *)item {
+    [self.items addObject:item];
+}
+
+-(GroceryItem *) containsItem:(NSString *)itemName {
+    return nil;
+}
+
+-(void) removeItem:(GroceryItem *)item {
+    if ( [self.items containsObject:item] ) {
+        [self.items removeObject:item];
+    }
+}
 
 @end
