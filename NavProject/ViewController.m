@@ -23,7 +23,7 @@ static NSString * const kClientID =
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    self.signInButton.style = kGPPSignInButtonStyleIconOnly;
+    self.signInButton.style = kGPPSignInButtonStyleStandard;
     
     //now check of mac account or google+ account, if exist, use it, showing using it.
     self.gppSignIn = [GPPSignIn sharedInstance];

@@ -17,13 +17,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6nD-pf-GQe" customClass="GPPSignInButton">
-                                <rect key="frame" x="16" y="93" width="142" height="142"/>
+                                <rect key="frame" x="16" y="93" width="505" height="139"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fyu-ct-0Pm" customClass="FBLoginView">
-                                <rect key="frame" x="16" y="292" width="300" height="300"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
@@ -32,6 +31,7 @@
                     <connections>
                         <outlet property="fbLogInView" destination="Fyu-ct-0Pm" id="oA9-Y3-AlB"/>
                         <outlet property="signInButton" destination="6nD-pf-GQe" id="iL8-xM-OvH"/>
+                        <segue destination="RIE-fC-yzd" kind="presentation" id="tlu-fQ-tKs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -142,7 +142,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zUQ-cb-UpE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1100" y="407"/>
+            <point key="canvasLocation" x="1062" y="337"/>
         </scene>
     </scenes>
 </document>
