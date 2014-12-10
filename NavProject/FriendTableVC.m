@@ -7,6 +7,8 @@
 //
 
 #import "FriendTableVC.h"
+#import <GooglePlus/GooglePlus.h>
+#import <GoogleOpenSource/GoogleOpenSource.h>
 
 @interface FriendTableVC ()
 
@@ -22,6 +24,24 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self loadFriends];
+}
+
+-(void) loadFriends {
+    GTLServicePlus *plusService = [[GTLServicePlus alloc] init];
+    [plusService setAuthorizer:[GPPSignIn sharedInstance].authentication];
+    plusService.retryEnabled = YES;//This causes error. Can not be found.
+    
+    GTLQueryPlus *query = [GTLQueryPlus queryForPeopleListWithUserId:@"me" collection:kGTLPlusCollectionVisible];
+    [plusService executeQuery:query completionHandler:^(GTLServiceTicket *ticket, GTLPlusPeopleFeed *peopleFeed, NSError *error) {
+        if (error) {
+            GTMLoggerError(@"Error: %@", error);
+        } else {
+            //Get an array of people from GTLPlusPeopleFeed
+            NSArray* peopleList = peopleFeed.items;
+            NSLog(@"%@", peopleList);
+        }
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
