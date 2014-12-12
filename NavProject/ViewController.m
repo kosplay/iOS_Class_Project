@@ -8,6 +8,9 @@
 
 #import "ViewController.h"
 #import "AppDelegate.h"
+#import "GroceryList.h"
+#import "GroceryItem.h"
+#import "Friend.h"
 
 @interface ViewController ()
 
@@ -31,6 +34,7 @@ static NSString * const kClientID =
     self.gppSignIn.shouldFetchGoogleUserEmail = YES;
     self.gppSignIn.clientID = kClientID;
     self.gppSignIn.scopes = @[kGTLAuthScopePlusLogin];
+    //self.gppSignIn.actions = [NSArray arrayWithObjects:@"listApp/", nil];// maybe this is how to store user's activity
     self.gppSignIn.delegate = self;
     [self.gppSignIn trySilentAuthentication];//hmm, default?
     
@@ -49,7 +53,56 @@ static NSString * const kClientID =
         [self refreshInterfaceBasedOnSignIn];
     }
     
-    //if no error, direct to next screen
+    AppDelegate *app = [[UIApplication sharedApplication]delegate];
+    //if no error, load data and direct to next screen
+    //load data
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"data" ofType:@"plist"];
+    //dic
+    NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:path];
+    
+    
+    //lists
+    NSArray *array = [dict objectForKey:@"lists"];
+    NSMutableArray *lists = [[NSMutableArray alloc]init];
+    for (id dict in array) {
+        //a list
+        GroceryList *list = [[GroceryList alloc]init];
+        //name for a list
+        list.listName = [dict objectForKey:@"listName"];
+        //items for a list
+        NSArray *itemArray = [dict objectForKey:@"items"];
+        for( NSDictionary *anItem in itemArray){
+            GroceryItem *newItem = [[GroceryItem alloc]init];
+            newItem.itemName = [anItem objectForKey:@"itemName"];
+            newItem.quantity = [[anItem objectForKey:@"itemName"]intValue];
+            newItem.price = [[anItem objectForKey:@"pricePerUnit"]doubleValue];
+            [list.items addObject:newItem];
+        }
+        //payer for a list
+        NSArray *payerArray = [dict objectForKey:@"payers"];
+        for( NSString *anPayer in payerArray){
+            [list.payers addObject:anPayer];
+        }
+        [lists addObject:list];
+    }
+    app.lists = lists;
+    
+    //friends
+    NSArray *friendArray = [dict objectForKey:@"friends"];
+    NSMutableArray *friends = [[NSMutableArray alloc]init];
+    for( NSDictionary *aFriend in friendArray){
+        Friend *newFriend = [[Friend alloc]init];
+        newFriend.name = [aFriend objectForKey:@"name"];
+        newFriend.fbID = [aFriend objectForKey:@"fbID"];
+        newFriend.googleplusID = [aFriend objectForKey:@"googleplusID"];
+        NSMutableArray *relatedLists = [aFriend objectForKey:@"relatedLists"];
+        for( NSString *aListName in relatedLists ){
+            [newFriend.lists addObject:aListName];
+        }
+        [friends addObject:newFriend];
+    }
+    app.friends = friends;
+
     
     //present home screen
     [self presentHomeScreen];

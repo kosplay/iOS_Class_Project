@@ -10,6 +10,7 @@
 
 @interface GroceryList : NSObject
 
+@property (strong, nonatomic) NSString *listName;
 @property (strong, nonatomic) NSMutableArray *items;
 @property (strong, nonatomic) NSMutableArray *payers;
 

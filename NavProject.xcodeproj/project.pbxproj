@@ -29,6 +29,7 @@
 		3F80A2B01A1FB6B7005FD707 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F80A2AF1A1FB6B7005FD707 /* SystemConfiguration.framework */; };
 		3F80A2B21A1FB6BD005FD707 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F80A2B11A1FB6BD005FD707 /* UIKit.framework */; };
 		3F80A2B41A1FD4E9005FD707 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F80A2B31A1FD4E9005FD707 /* FacebookSDK.framework */; };
+		3FB9064C1A3B69B1001D7CCC /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3FB9064B1A3B69B1001D7CCC /* data.plist */; };
 		3FCEF6FE1A2E6F97009B85BC /* GroceryItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FCEF6FD1A2E6F97009B85BC /* GroceryItem.m */; };
 		3FCEF7011A2E7AF5009B85BC /* Friend.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FCEF7001A2E7AF5009B85BC /* Friend.m */; };
 		3FCEF7041A2E7BB7009B85BC /* GroceryList.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FCEF7031A2E7BB7009B85BC /* GroceryList.m */; };
@@ -76,6 +77,7 @@
 		3F80A2AF1A1FB6B7005FD707 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		3F80A2B11A1FB6BD005FD707 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3F80A2B31A1FD4E9005FD707 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		3FB9064B1A3B69B1001D7CCC /* data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = data.plist; sourceTree = "<group>"; };
 		3FCEF6FC1A2E6F97009B85BC /* GroceryItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroceryItem.h; sourceTree = "<group>"; };
 		3FCEF6FD1A2E6F97009B85BC /* GroceryItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroceryItem.m; sourceTree = "<group>"; };
 		3FCEF6FF1A2E7AF5009B85BC /* Friend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Friend.h; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 				3FF8281C1A31145A00E0E031 /* GroceryTableVC.m */,
 				3FF8281E1A31149700E0E031 /* FriendTableVC.h */,
 				3FF8281F1A31149700E0E031 /* FriendTableVC.m */,
+				3FB9064B1A3B69B1001D7CCC /* data.plist */,
 			);
 			path = NavProject;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 				3F80A27D1A1FB610005FD707 /* Main.storyboard in Resources */,
 				3F80A2821A1FB610005FD707 /* LaunchScreen.xib in Resources */,
 				3F80A29B1A1FB63E005FD707 /* GooglePlus.bundle in Resources */,
+				3FB9064C1A3B69B1001D7CCC /* data.plist in Resources */,
 				3F80A27F1A1FB610005FD707 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

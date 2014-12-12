@@ -9,6 +9,7 @@
 #import "FriendTableVC.h"
 #import <GooglePlus/GooglePlus.h>
 #import <GoogleOpenSource/GoogleOpenSource.h>
+#import "AppDelegate.h"
 
 @interface FriendTableVC ()
 
@@ -24,7 +25,17 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    [self loadFriends];
+    
+    
+    //load frinds from social network
+    //[self loadFriends];
+    
+    //load local friendlist from app delegate
+    //http://stackoverflow.com/questions/5244830/using-a-delegate-to-pass-data-back-up-the-navigation-stack
+    //
+    AppDelegate *app = [[UIApplication sharedApplication]delegate];
+    NSLog(@"%@\n", app.lists);
+    NSLog(@"%@\n", app.friends);
 }
 
 -(void) loadFriends {

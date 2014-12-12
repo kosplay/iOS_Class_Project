@@ -12,5 +12,7 @@
 
 @property (strong, nonatomic) NSString *name;
 @property (strong, nonatomic) NSMutableArray *lists;
+@property (strong, nonatomic) NSString *fbID;
+@property (strong, nonatomic) NSString *googleplusID;
 
 @end

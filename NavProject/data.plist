@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>friends</key>
+	<array>
+		<dict>
+			<key>name</key>
+			<string>LanXi Xing</string>
+			<key>fbID</key>
+			<string></string>
+			<key>googleplusID</key>
+			<string></string>
+			<key>relatedLists</key>
+			<array>
+				<string>my first list</string>
+			</array>
+		</dict>
+	</array>
+	<key>lists</key>
+	<array>
+		<dict>
+			<key>listName</key>
+			<string>my first list</string>
+			<key>items</key>
+			<array>
+				<dict>
+					<key>pricePerUnit</key>
+					<real>6.99</real>
+					<key>itemName</key>
+					<string>Red Bull 4 pack</string>
+					<key>itemQuantity</key>
+					<integer>2</integer>
+				</dict>
+			</array>
+			<key>payers</key>
+			<array>
+				<string>LanXi Xing</string>
+			</array>
+		</dict>
+	</array>
+</dict>
+</plist>
