@@ -16,26 +16,70 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6nD-pf-GQe" customClass="GPPSignInButton">
-                                <rect key="frame" x="16" y="93" width="505" height="139"/>
-                                <state key="normal">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fyu-ct-0Pm" customClass="FBLoginView">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="aUB-3B-Wpx"/>
+                                    <constraint firstAttribute="width" constant="300" id="quI-IJ-hRL"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="aUB-3B-Wpx"/>
+                                        <exclude reference="quI-IJ-hRL"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="aUB-3B-Wpx"/>
+                                        <include reference="quI-IJ-hRL"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ol6-ZR-E8J" customClass="GPPSignInButton">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fyu-ct-0Pm" customClass="FBLoginView">
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Fyu-ct-0Pm" firstAttribute="centerX" secondItem="Ol6-ZR-E8J" secondAttribute="centerX" id="I6J-ou-wDj"/>
+                            <constraint firstAttribute="centerY" secondItem="Fyu-ct-0Pm" secondAttribute="centerY" id="T4y-Uy-bbD"/>
+                            <constraint firstItem="Ol6-ZR-E8J" firstAttribute="top" secondItem="Fyu-ct-0Pm" secondAttribute="bottom" constant="20" id="hoJ-a6-qRU"/>
+                            <constraint firstAttribute="centerX" secondItem="Fyu-ct-0Pm" secondAttribute="centerX" id="x0J-rx-IbW"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Ol6-ZR-E8J"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="I6J-ou-wDj"/>
+                                <exclude reference="T4y-Uy-bbD"/>
+                                <exclude reference="x0J-rx-IbW"/>
+                                <exclude reference="hoJ-a6-qRU"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Ol6-ZR-E8J"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="I6J-ou-wDj"/>
+                                <include reference="T4y-Uy-bbD"/>
+                                <include reference="x0J-rx-IbW"/>
+                                <include reference="hoJ-a6-qRU"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="fbLogInView" destination="Fyu-ct-0Pm" id="oA9-Y3-AlB"/>
-                        <outlet property="signInButton" destination="6nD-pf-GQe" id="iL8-xM-OvH"/>
                         <segue destination="RIE-fC-yzd" kind="presentation" id="tlu-fQ-tKs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.5" y="156"/>
         </scene>
         <!--Notifications-->
         <scene sceneID="sDI-G2-qaQ">
