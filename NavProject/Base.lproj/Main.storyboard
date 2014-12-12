@@ -74,7 +74,7 @@
                     </view>
                     <connections>
                         <outlet property="fbLogInView" destination="Fyu-ct-0Pm" id="oA9-Y3-AlB"/>
-                        <segue destination="RIE-fC-yzd" kind="presentation" id="tlu-fQ-tKs"/>
+                        <segue destination="RIE-fC-yzd" kind="presentation" identifier="loginSegue" id="tlu-fQ-tKs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -123,7 +123,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KUm-mL-l4O">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="List" id="KUm-mL-l4O">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KUm-mL-l4O" id="ZEo-Ke-ZE7">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -150,7 +150,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="cMt-Xf-Tv4">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Friend" id="cMt-Xf-Tv4">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cMt-Xf-Tv4" id="Iu9-zl-bH5">
                                     <autoresizingMask key="autoresizingMask"/>

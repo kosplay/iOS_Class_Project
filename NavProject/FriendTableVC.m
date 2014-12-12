@@ -10,6 +10,7 @@
 #import <GooglePlus/GooglePlus.h>
 #import <GoogleOpenSource/GoogleOpenSource.h>
 #import "AppDelegate.h"
+#import "Friend.h"
 
 @interface FriendTableVC ()
 
@@ -34,8 +35,9 @@
     //http://stackoverflow.com/questions/5244830/using-a-delegate-to-pass-data-back-up-the-navigation-stack
     //
     AppDelegate *app = [[UIApplication sharedApplication]delegate];
-    NSLog(@"%@\n", app.lists);
-    NSLog(@"%@\n", app.friends);
+    //NSLog(@"%@\n", app.lists);
+    //NSLog(@"%@\n", app.friends);
+    self.friends = app.friends;
 }
 
 -(void) loadFriends {
@@ -50,7 +52,7 @@
         } else {
             //Get an array of people from GTLPlusPeopleFeed
             NSArray* peopleList = peopleFeed.items;
-            NSLog(@"%@", peopleList);
+            //NSLog(@"%@", peopleList);
         }
     }];
 }
@@ -63,26 +65,28 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return [self.friends count];
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Friend" forIndexPath:indexPath];
     
     // Configure the cell...
+    Friend *friend = [self.friends objectAtIndex:indexPath.row];
+    cell.textLabel.text = friend.name;
+    cell.detailTextLabel.text = @"You have 100 dollar difference";
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.
