@@ -55,7 +55,7 @@ static NSString * const kClientID =
     
     AppDelegate *app = [[UIApplication sharedApplication]delegate];
     //if no error, load data and direct to next screen
-    //load data
+    //load data from plist
     NSString *path = [[NSBundle mainBundle] pathForResource:@"data" ofType:@"plist"];
     //dic
     NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:path];

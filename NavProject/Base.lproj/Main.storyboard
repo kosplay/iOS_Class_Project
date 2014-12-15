@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fyu-ct-0Pm" customClass="FBLoginView">
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fyu-ct-0Pm" customClass="FBLoginView">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="aUB-3B-Wpx"/>
@@ -54,10 +54,10 @@
                                 <exclude reference="Ol6-ZR-E8J"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="hoJ-a6-qRU"/>
                                 <exclude reference="I6J-ou-wDj"/>
                                 <exclude reference="T4y-Uy-bbD"/>
                                 <exclude reference="x0J-rx-IbW"/>
-                                <exclude reference="hoJ-a6-qRU"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -65,10 +65,10 @@
                                 <include reference="Ol6-ZR-E8J"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="hoJ-a6-qRU"/>
                                 <include reference="I6J-ou-wDj"/>
                                 <include reference="T4y-Uy-bbD"/>
                                 <include reference="x0J-rx-IbW"/>
-                                <include reference="hoJ-a6-qRU"/>
                             </mask>
                         </variation>
                     </view>

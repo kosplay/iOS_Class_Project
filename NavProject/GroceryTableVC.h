@@ -10,4 +10,6 @@
 
 @interface GroceryTableVC : UITableViewController
 
+@property (strong, nonatomic) NSMutableArray *lists;
+
 @end

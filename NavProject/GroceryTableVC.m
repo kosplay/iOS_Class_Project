@@ -7,6 +7,8 @@
 //
 
 #import "GroceryTableVC.h"
+#import "AppDelegate.h"
+#import "GroceryList.h"
 
 @interface GroceryTableVC ()
 
@@ -22,6 +24,10 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    AppDelegate *app = [[UIApplication sharedApplication]delegate];
+    //NSLog(@"%@\n", app.lists);
+    //NSLog(@"%@\n", app.friends);
+    self.lists = app.lists;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -32,26 +38,28 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return [self.lists count];
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"List" forIndexPath:indexPath];
     
     // Configure the cell...
+    GroceryList *list = [self.lists objectAtIndex:indexPath.row];
+    cell.textLabel.text = list.listName;
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%lu Items", (unsigned long)[list.items count]];
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.
