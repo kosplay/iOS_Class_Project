@@ -1,21 +1,24 @@
 //
-//  GroceryTableVC.m
+//  ListDetailVC.m
 //  NavProject
 //
-//  Created by Student on 12/4/14.
+//  Created by Student on 12/15/14.
 //  Copyright (c) 2014 Kosplay. All rights reserved.
 //
 
-#import "GroceryTableVC.h"
-#import "AppDelegate.h"
-#import "GroceryList.h"
 #import "ListDetailVC.h"
+#import "GroceryItem.h"
+#import "Friend.h"
 
-@interface GroceryTableVC ()
+#define LIST_SUMMARY_SECTION 0
+#define LIST_ITEMS_SECTION 1
+#define LIST_PAYERS_SECTION 2
+
+@interface ListDetailVC ()
 
 @end
 
-@implementation GroceryTableVC
+@implementation ListDetailVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -25,10 +28,6 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    AppDelegate *app = [[UIApplication sharedApplication]delegate];
-    //NSLog(@"%@\n", app.lists);
-    //NSLog(@"%@\n", app.friends);
-    self.lists = app.lists;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -40,23 +39,90 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
-    return 1;
+    return 3;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return [self.lists count];
+    int row;
+    switch (section) {
+        case LIST_SUMMARY_SECTION:
+            row = 3;
+            break;
+            
+        case LIST_ITEMS_SECTION:
+            row = (int)[self.list.items count];
+            break;
+            
+        case LIST_PAYERS_SECTION:
+            row = (int)[self.list.payers count];
+            break;
+        default:
+            row = 0;
+            break;
+    }
+    return row;
 }
 
+-(NSString *) tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    NSString *title;
+    switch (section) {
+        case LIST_SUMMARY_SECTION:
+            title = @"Summary";
+            break;
+        case LIST_ITEMS_SECTION:
+            title = @"Items";
+            break;
+        case LIST_PAYERS_SECTION:
+            title = @"Payers";
+            break;
+            
+        default:
+            NSLog(@"Should not be here");
+            break;
+    }
+    return title;
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"List" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"listDetailCell" forIndexPath:indexPath];
     
     // Configure the cell...
-    GroceryList *list = [self.lists objectAtIndex:indexPath.row];
-    cell.textLabel.text = list.listName;
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%lu Items", (unsigned long)[list.items count]];
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    switch (indexPath.section) {
+        case LIST_SUMMARY_SECTION:
+            
+            switch (indexPath.row) {
+                case 0:
+                    cell.textLabel.text = [NSString stringWithFormat:@"Total Price: %lu", (unsigned long)[self.list getTotalPrice]];
+                    break;
+                    
+                case 1:
+                    cell.textLabel.text = [NSString stringWithFormat:@"Items: %lu", (unsigned long)[self.list.items count]];
+                    break;
+                    
+                case 2:
+                    cell.textLabel.text = [NSString stringWithFormat:@"Payers: %lu", (unsigned long)[self.list.payers count]];
+                    break;
+                    
+                default:
+                    break;
+            }
+            break;
+            
+        case LIST_ITEMS_SECTION:{
+            GroceryItem *item = [self.list.items objectAtIndex:indexPath.row];
+            cell.textLabel.text = item.itemName;
+            break;
+        }
+        case LIST_PAYERS_SECTION:{
+            Friend *payer = [self.list.payers objectAtIndex:indexPath.row];
+            cell.textLabel.text = payer.name;
+            break;
+        }
+        default:
+            break;
+            
+    }
     
     return cell;
 }
@@ -96,21 +162,14 @@
 }
 */
 
-
+/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-    //NSLog(@"destination : %@", [segue destinationViewController]);
-    
-    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-    ListDetailVC * newVC = segue.destinationViewController;
-    GroceryList *list = [self.lists objectAtIndex:indexPath.row];
-    newVC.list = list;
-    newVC.title = list.listName;
 }
-
+*/
 
 @end

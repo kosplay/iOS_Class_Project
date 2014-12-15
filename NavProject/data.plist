@@ -20,6 +20,8 @@
 	<key>lists</key>
 	<array>
 		<dict>
+			<key>foodOrder</key>
+			<false/>
 			<key>listName</key>
 			<string>my first list</string>
 			<key>items</key>

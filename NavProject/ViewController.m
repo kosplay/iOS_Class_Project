@@ -67,15 +67,19 @@ static NSString * const kClientID =
     for (id dict in array) {
         //a list
         GroceryList *list = [[GroceryList alloc]init];
+        list.items = [[NSMutableArray alloc] init];
+        list.payers = [[NSMutableArray alloc] init];
         //name for a list
         list.listName = [dict objectForKey:@"listName"];
+        //foodOrder indicator
+        list.foodOrder = [dict objectForKey:@"foodOrder"];
         //items for a list
         NSArray *itemArray = [dict objectForKey:@"items"];
         for( NSDictionary *anItem in itemArray){
             GroceryItem *newItem = [[GroceryItem alloc]init];
             newItem.itemName = [anItem objectForKey:@"itemName"];
-            newItem.quantity = [[anItem objectForKey:@"itemName"]intValue];
-            newItem.price = [[anItem objectForKey:@"pricePerUnit"]doubleValue];
+            newItem.quantity = [[anItem objectForKey:@"itemQuantity"]intValue];
+            newItem.pricePerUnit = [[anItem objectForKey:@"pricePerUnit"]doubleValue];
             [list.items addObject:newItem];
         }
         //payer for a list

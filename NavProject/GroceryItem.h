@@ -11,7 +11,7 @@
 @interface GroceryItem : NSObject
 
 @property (strong,nonatomic) NSString *itemName;
-@property (nonatomic) double price;
+@property (nonatomic) double pricePerUnit;
 @property int quantity;
 
 @end

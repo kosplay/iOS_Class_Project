@@ -114,7 +114,7 @@
             </objects>
             <point key="canvasLocation" x="1920" y="76"/>
         </scene>
-        <!--Grocery List-->
+        <!--Lists-->
         <scene sceneID="zip-Qh-ePE">
             <objects>
                 <tableViewController id="H8f-Md-Dvg" customClass="GroceryTableVC" sceneMemberID="viewController">
@@ -123,11 +123,34 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="List" id="KUm-mL-l4O">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="List" textLabel="QgD-8d-p5v" detailTextLabel="Tdu-va-8cX" style="IBUITableViewCellStyleSubtitle" id="KUm-mL-l4O">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KUm-mL-l4O" id="ZEo-Ke-ZE7">
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="QgD-8d-p5v">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                            <variation key="widthClass=compact">
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            </variation>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Tdu-va-8cX">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                            <variation key="widthClass=compact">
+                                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            </variation>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="4j2-Kn-UGu" kind="show" identifier="showListDetail" id="AVn-0P-yIE"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -135,11 +158,11 @@
                             <outlet property="delegate" destination="H8f-Md-Dvg" id="wUL-TV-JFT"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Grocery List" id="RIG-Da-OCU"/>
+                    <navigationItem key="navigationItem" title="Lists" id="eOp-Ge-KzK"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XU7-jQ-GLC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1920" y="749"/>
+            <point key="canvasLocation" x="2838" y="749"/>
         </scene>
         <!--Friends-->
         <scene sceneID="m7b-8P-h1e">
@@ -150,10 +173,30 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Friend" id="cMt-Xf-Tv4">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Friend" textLabel="YHv-ln-JTm" detailTextLabel="gyL-jD-9gM" style="IBUITableViewCellStyleSubtitle" id="cMt-Xf-Tv4">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cMt-Xf-Tv4" id="Iu9-zl-bH5">
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YHv-ln-JTm">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                            <variation key="widthClass=compact">
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            </variation>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gyL-jD-9gM">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                            <variation key="widthClass=compact">
+                                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            </variation>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -162,11 +205,38 @@
                             <outlet property="delegate" destination="XtX-Yb-NAx" id="b8Y-jI-Ok8"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Friends" id="f5W-vS-Ykx"/>
+                    <tabBarItem key="tabBarItem" title="Friends" id="DqL-en-jH9"/>
+                    <navigationItem key="navigationItem" title="Friends" id="7hj-HW-wK4"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iEX-Q8-vaC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1920" y="1411"/>
+            <point key="canvasLocation" x="1062" y="1441"/>
+        </scene>
+        <!--List DetailVC-->
+        <scene sceneID="hYe-Ip-8kt">
+            <objects>
+                <tableViewController id="4j2-Kn-UGu" customClass="ListDetailVC" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="0vc-PK-oOt">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="listDetailCell" id="uvc-Tm-r8X">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uvc-Tm-r8X" id="90p-Do-ugg">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="4j2-Kn-UGu" id="DXP-CN-Q4w"/>
+                            <outlet property="delegate" destination="4j2-Kn-UGu" id="hgb-oS-67q"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HOL-Rx-nnw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3591" y="749"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="wFG-ad-Wf4">
@@ -180,13 +250,32 @@
                     </tabBar>
                     <connections>
                         <segue destination="hHw-hH-4SO" kind="relationship" relationship="viewControllers" id="Flx-IR-gNh"/>
-                        <segue destination="H8f-Md-Dvg" kind="relationship" relationship="viewControllers" id="hLW-dm-L4w"/>
-                        <segue destination="XtX-Yb-NAx" kind="relationship" relationship="viewControllers" id="PG6-jT-2un"/>
+                        <segue destination="ALG-FU-XL2" kind="relationship" relationship="viewControllers" id="hLW-dm-L4w"/>
+                        <segue destination="XtX-Yb-NAx" kind="relationship" relationship="viewControllers" id="9mm-iT-Ra4"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zUQ-cb-UpE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1062" y="337"/>
+        </scene>
+        <!--Grocery List-->
+        <scene sceneID="naX-dS-PaA">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ALG-FU-XL2" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Grocery List" id="RIG-Da-OCU"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Zyl-FJ-CK0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="H8f-Md-Dvg" kind="relationship" relationship="rootViewController" id="Sv5-XO-wpr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nhH-Mi-cXR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1920" y="749"/>
         </scene>
     </scenes>
 </document>

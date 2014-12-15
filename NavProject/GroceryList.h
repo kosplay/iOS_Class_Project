@@ -13,5 +13,8 @@
 @property (strong, nonatomic) NSString *listName;
 @property (strong, nonatomic) NSMutableArray *items;
 @property (strong, nonatomic) NSMutableArray *payers;
+@property bool foodOrder;
+
+-(float) getTotalPrice;
 
 @end

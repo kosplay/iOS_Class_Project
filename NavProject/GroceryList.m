@@ -40,4 +40,12 @@
     }
 }
 
+-(float) getTotalPrice {
+    float totalPrice = 0;
+    for (GroceryItem *anItem in self.items) {
+        totalPrice += anItem.pricePerUnit;
+    }
+    return totalPrice;
+}
+
 @end
