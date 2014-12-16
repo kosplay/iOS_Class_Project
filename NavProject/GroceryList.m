@@ -76,12 +76,12 @@
     return totalPrice;
 }
 
--(size_t) getNumOfItems {
-    return [self.items count];
+-(int) getNumOfItems {
+    return (int)[self.items count];
 }
 
--(size_t) getNumOfPayers {
-    return [self.payers count];
+-(int) getNumOfPayers {
+    return (int)[self.payers count];
 }
 
 @end

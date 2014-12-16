@@ -21,7 +21,7 @@
 -(BOOL) addItem:(NSString *)itemName ofQuantity:(float)quantity withPrice:(float)pricePerUnit;
 -(void) removeItem:(NSString *)itemName;
 -(float) getTotalPrice;
--(size_t) getNumOfItems;
--(size_t) getNumOfPayers;
+-(int) getNumOfItems;
+-(int) getNumOfPayers;
 
 @end
