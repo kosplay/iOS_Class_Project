@@ -9,7 +9,7 @@
 #import "FriendTableVC.h"
 #import <GooglePlus/GooglePlus.h>
 #import <GoogleOpenSource/GoogleOpenSource.h>
-#import "AppDelegate.h"
+#import "AppModel.h"
 #import "Friend.h"
 
 @interface FriendTableVC ()
@@ -37,7 +37,7 @@
     //load local friendlist from app delegate
     //http://stackoverflow.com/questions/5244830/using-a-delegate-to-pass-data-back-up-the-navigation-stack
     //
-    AppDelegate *app = [[UIApplication sharedApplication]delegate];
+    AppModel *app = [AppModel sharedAppModel];
     //NSLog(@"%@\n", app.lists);
     //NSLog(@"%@\n", app.friends);
     self.friends = app.friends;

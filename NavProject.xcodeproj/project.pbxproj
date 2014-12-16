@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F79DFAB1A3FBDF1008C8A6C /* AppModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F79DFAA1A3FBDF1008C8A6C /* AppModel.m */; };
 		3F80A2741A1FB610005FD707 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F80A2731A1FB610005FD707 /* main.m */; };
 		3F80A2771A1FB610005FD707 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F80A2761A1FB610005FD707 /* AppDelegate.m */; };
 		3F80A27A1A1FB610005FD707 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F80A2791A1FB610005FD707 /* ViewController.m */; };
@@ -50,6 +51,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F79DFA91A3FBDF1008C8A6C /* AppModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppModel.h; sourceTree = "<group>"; };
+		3F79DFAA1A3FBDF1008C8A6C /* AppModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppModel.m; sourceTree = "<group>"; };
 		3F80A26E1A1FB610005FD707 /* NavProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NavProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F80A2721A1FB610005FD707 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F80A2731A1FB610005FD707 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -186,6 +189,8 @@
 				3FF8281E1A31149700E0E031 /* FriendTableVC.h */,
 				3FF8281F1A31149700E0E031 /* FriendTableVC.m */,
 				3FB9064B1A3B69B1001D7CCC /* data.plist */,
+				3F79DFA91A3FBDF1008C8A6C /* AppModel.h */,
+				3F79DFAA1A3FBDF1008C8A6C /* AppModel.m */,
 			);
 			path = NavProject;
 			sourceTree = "<group>";
@@ -318,6 +323,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F79DFAB1A3FBDF1008C8A6C /* AppModel.m in Sources */,
 				3F80A27A1A1FB610005FD707 /* ViewController.m in Sources */,
 				3FCEF6FE1A2E6F97009B85BC /* GroceryItem.m in Sources */,
 				3FF828201A31149700E0E031 /* FriendTableVC.m in Sources */,

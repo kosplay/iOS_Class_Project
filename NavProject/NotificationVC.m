@@ -7,7 +7,7 @@
 //
 
 #import "NotificationVC.h"
-#import "AppDelegate.h"
+#import "AppModel.h"
 #import <GoogleOpenSource/GoogleOpenSource.h>
 
 //#define SELFY_SIEZ 50
@@ -21,7 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    AppDelegate *app = [[UIApplication sharedApplication] delegate];
+    AppModel *app = [AppModel sharedAppModel];
     GTLPlusPerson *me = app.me;
     self.nameLabel.text = me.displayName;
     NSString *url = [NSString stringWithFormat: @"%@",me.image.url];

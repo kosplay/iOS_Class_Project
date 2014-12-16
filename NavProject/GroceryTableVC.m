@@ -7,7 +7,7 @@
 //
 
 #import "GroceryTableVC.h"
-#import "AppDelegate.h"
+#import "AppModel.h"
 #import "GroceryList.h"
 #import "ListDetailVC.h"
 
@@ -25,7 +25,7 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    AppDelegate *app = [[UIApplication sharedApplication]delegate];
+    AppModel *app = [AppModel sharedAppModel];
     //NSLog(@"%@\n", app.lists);
     //NSLog(@"%@\n", app.friends);
     self.lists = app.lists;

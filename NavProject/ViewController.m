@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "AppDelegate.h"
+#import "AppModel.h"
 #import "GroceryList.h"
 #import "GroceryItem.h"
 #import "Friend.h"
@@ -53,7 +53,7 @@ static NSString * const kClientID =
         [self refreshInterfaceBasedOnSignIn];
     }
     
-    AppDelegate *app = [[UIApplication sharedApplication]delegate];
+    AppModel *app = [AppModel sharedAppModel];
     //if no error, load data and direct to next screen
     //load data from plist
     NSString *path = [[NSBundle mainBundle] pathForResource:@"data" ofType:@"plist"];
@@ -133,10 +133,8 @@ static NSString * const kClientID =
                                              //@"%@\n%@", person.displayName,
                                              //person.aboutMe];
                     //NSLog(@"%@",description);
-                    AppDelegate *app = [[UIApplication sharedApplication]delegate];
+                    AppModel *app = [AppModel sharedAppModel];
                     app.me = person;
-                    app.aboutMe = person.aboutMe;
-                    app.myName = person.displayName;
                     [self presentHomeScreen];
                 }
             }];
