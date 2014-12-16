@@ -128,7 +128,7 @@
 /** get Num of payers from a list 
     return -1 if the list with that name does not exist
  */
--(int) getNumofPayersFromList:(NSString *)listName {
+-(int) getNumOfPayersFromList:(NSString *)listName {
     GroceryList *list = [self containListWithName:listName];
     if ( list != nil ) {
         return [list getNumOfPayers];
@@ -136,5 +136,24 @@
         return -1;
     }
 }
+
+/**
+    set imageURL for a friend, after getting one from a platform like google or facebook
+ */
+-(void) setFriendImgURL:(NSString *)imgURL forFriendWithName:(NSString *)friendName {
+
+}
+
+/**
+    load
+ */
+
+/**
+ 
+ */
+
+/**
+ 
+ */
 
 @end

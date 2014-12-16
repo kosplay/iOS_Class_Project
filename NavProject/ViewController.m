@@ -109,7 +109,7 @@ static NSString * const kClientID =
 
     //load profile and present homescreen
     [self loadGooglePlusProfile];
-    //present home screen
+    //present home screen. This is called asyncrhonizely
     //[self presentHomeScreen];
 }
 
@@ -194,7 +194,7 @@ static NSString * const kClientID =
     //self.profilePictureView.profileID = user.id;
     //self.nameLabel.text = user.name;
     
-    //present home screen
+    //present home screen. only trigger when the response arrives
     [self presentHomeScreen];
 }
 

@@ -45,6 +45,7 @@
 }   
 
 -(void) loadFriends {
+    //AppModel *app = [AppModel sharedAppModel];
     GTLServicePlus *plusService = [[GTLServicePlus alloc] init];
     [plusService setAuthorizer:[GPPSignIn sharedInstance].authentication];
         plusService.retryEnabled = YES;//This causes error. Can not be found.
