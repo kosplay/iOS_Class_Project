@@ -14,5 +14,6 @@
 @property (strong, nonatomic) NSMutableArray *lists;
 @property (strong, nonatomic) NSString *fbID;
 @property (strong, nonatomic) NSString *googleplusID;
+@property (strong, nonatomic) NSString *imgURL;
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <GoogleOpenSource/GoogleOpenSource.h>
 #import <GooglePlus/GooglePlus.h>
 #import <FacebookSDK/FacebookSDK.h>
 
@@ -15,6 +16,9 @@
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) NSMutableArray *lists;
 @property (strong, nonatomic) NSMutableArray *friends;
+@property GTLPlusPerson *me;
+@property NSString *myName;
+@property NSString *aboutMe;
 
 @end
 

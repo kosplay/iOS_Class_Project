@@ -27,6 +27,9 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
+    //top margin so navigation bar gives some space, could be a code debt
+    UIEdgeInsets inset = UIEdgeInsetsMake(20, 0, 0, 0);
+    self.tableView.contentInset = inset;
     
     //load frinds from social network
     //[self loadFriends];
@@ -38,12 +41,13 @@
     //NSLog(@"%@\n", app.lists);
     //NSLog(@"%@\n", app.friends);
     self.friends = app.friends;
-}
+    [self loadFriends];
+}   
 
 -(void) loadFriends {
     GTLServicePlus *plusService = [[GTLServicePlus alloc] init];
     [plusService setAuthorizer:[GPPSignIn sharedInstance].authentication];
-    plusService.retryEnabled = YES;//This causes error. Can not be found.
+        plusService.retryEnabled = YES;//This causes error. Can not be found.
     
     GTLQueryPlus *query = [GTLQueryPlus queryForPeopleListWithUserId:@"me" collection:kGTLPlusCollectionVisible];
     [plusService executeQuery:query completionHandler:^(GTLServiceTicket *ticket, GTLPlusPeopleFeed *peopleFeed, NSError *error) {
@@ -52,7 +56,16 @@
         } else {
             //Get an array of people from GTLPlusPeopleFeed
             NSArray* peopleList = peopleFeed.items;
-            //NSLog(@"%@", peopleList);
+            NSLog(@"%@", peopleList);
+            
+            for (GTLPlusPerson *aPerson in peopleList) {
+                for ( Friend *aFriend in self.friends ){
+                    if( [aPerson.displayName isEqualToString:aFriend.name] ){
+                        aFriend.imgURL = aPerson.image.url;
+                    }
+                }
+            }
+            [self.tableView reloadData];
         }
     }];
 }
@@ -81,6 +94,10 @@
     // Configure the cell...
     Friend *friend = [self.friends objectAtIndex:indexPath.row];
     cell.textLabel.text = friend.name;
+    if(friend.imgURL) {
+        cell.imageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:friend.imgURL]]];
+
+    }
     cell.detailTextLabel.text = @"You have 100 dollar difference";
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     

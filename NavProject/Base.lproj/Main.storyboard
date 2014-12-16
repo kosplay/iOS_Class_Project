@@ -93,22 +93,81 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Notifications" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SUG-wH-eDk">
-                                <rect key="frame" x="137" y="20" width="96" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="This is where notifications show up." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BjP-Bk-waE">
                                 <rect key="frame" x="49" y="289" width="273" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BLa-I3-Xes">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="2vN-BR-Ee9"/>
+                                    <constraint firstAttribute="width" constant="50" id="MR1-NZ-p7Z"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="2vN-BR-Ee9"/>
+                                        <exclude reference="MR1-NZ-p7Z"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="2vN-BR-Ee9"/>
+                                        <include reference="MR1-NZ-p7Z"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KKn-77-1eG">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="BjP-Bk-waE" secondAttribute="centerX" id="1c0-8C-Vf9"/>
+                            <constraint firstItem="KKn-77-1eG" firstAttribute="leading" secondItem="BLa-I3-Xes" secondAttribute="trailing" constant="8" id="BIl-jQ-KZT"/>
+                            <constraint firstItem="BLa-I3-Xes" firstAttribute="leading" secondItem="V9f-eI-Yi3" secondAttribute="leading" constant="16" id="HFx-yN-5eT"/>
+                            <constraint firstAttribute="centerY" secondItem="BjP-Bk-waE" secondAttribute="centerY" id="f9h-6t-cyp"/>
+                            <constraint firstItem="BLa-I3-Xes" firstAttribute="centerY" secondItem="KKn-77-1eG" secondAttribute="centerY" id="mGf-0W-ufi"/>
+                            <constraint firstItem="BLa-I3-Xes" firstAttribute="top" secondItem="V9f-eI-Yi3" secondAttribute="top" constant="20" id="w5X-eb-P7M"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="BLa-I3-Xes"/>
+                                <exclude reference="KKn-77-1eG"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="HFx-yN-5eT"/>
+                                <exclude reference="mGf-0W-ufi"/>
+                                <exclude reference="w5X-eb-P7M"/>
+                                <exclude reference="BIl-jQ-KZT"/>
+                                <exclude reference="1c0-8C-Vf9"/>
+                                <exclude reference="f9h-6t-cyp"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="BLa-I3-Xes"/>
+                                <include reference="KKn-77-1eG"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="HFx-yN-5eT"/>
+                                <include reference="mGf-0W-ufi"/>
+                                <include reference="w5X-eb-P7M"/>
+                                <include reference="BIl-jQ-KZT"/>
+                                <include reference="1c0-8C-Vf9"/>
+                                <include reference="f9h-6t-cyp"/>
+                            </mask>
+                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Notifications" id="aW7-gE-KVF"/>
+                    <connections>
+                        <outlet property="nameLabel" destination="KKn-77-1eG" id="6kE-09-ZPv"/>
+                        <outlet property="selfy" destination="BLa-I3-Xes" id="Ew2-Sz-j2u"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qgM-Xh-kQq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

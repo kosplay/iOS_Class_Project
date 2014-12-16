@@ -7,6 +7,10 @@
 //
 
 #import "NotificationVC.h"
+#import "AppDelegate.h"
+#import <GoogleOpenSource/GoogleOpenSource.h>
+
+//#define SELFY_SIEZ 50
 
 @interface NotificationVC ()
 
@@ -17,6 +21,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    AppDelegate *app = [[UIApplication sharedApplication] delegate];
+    GTLPlusPerson *me = app.me;
+    self.nameLabel.text = me.displayName;
+    NSString *url = [NSString stringWithFormat: @"%@",me.image.url];
+    self.selfy.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:url]]];
+    
+    
 }
 
 -(void)viewDidAppear:(BOOL)animated {

@@ -107,9 +107,39 @@ static NSString * const kClientID =
     }
     app.friends = friends;
 
-    
+    //load profile and present homescreen
+    [self loadGooglePlusProfile];
     //present home screen
-    [self presentHomeScreen];
+    //[self presentHomeScreen];
+}
+
+-(void) loadGooglePlusProfile {
+    GTLServicePlus *plusService = [[GTLServicePlus alloc] init];
+    plusService.retryEnabled = YES;
+    
+    [plusService setAuthorizer:[GPPSignIn sharedInstance].authentication];
+    
+    GTLQueryPlus *query = [GTLQueryPlus queryForPeopleGetWithUserId:@"me"];
+    
+    [plusService executeQuery:query
+            completionHandler:^(GTLServiceTicket *ticket,
+                                GTLPlusPerson *person,
+                                NSError *error) {
+                if (error) {
+                    GTMLoggerError(@"Error: %@", error);
+                } else {
+                    // Retrieve the display name and "about me" text
+                    //NSString *description = [NSString stringWithFormat:
+                                             //@"%@\n%@", person.displayName,
+                                             //person.aboutMe];
+                    //NSLog(@"%@",description);
+                    AppDelegate *app = [[UIApplication sharedApplication]delegate];
+                    app.me = person;
+                    app.aboutMe = person.aboutMe;
+                    app.myName = person.displayName;
+                    [self presentHomeScreen];
+                }
+            }];
 }
 
 //google+ sign in refresh

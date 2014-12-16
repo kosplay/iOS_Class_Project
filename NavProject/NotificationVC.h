@@ -10,4 +10,10 @@
 
 @interface NotificationVC : UIViewController
 
+@property NSString *myName;
+@property NSString *aboutMe;
+
+@property (strong, nonatomic) IBOutlet UIImageView *selfy;
+@property (strong, nonatomic) IBOutlet UILabel *nameLabel;
+
 @end
