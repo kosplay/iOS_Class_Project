@@ -173,6 +173,9 @@
 				3F80A27B1A1FB610005FD707 /* Main.storyboard */,
 				3F80A27E1A1FB610005FD707 /* Images.xcassets */,
 				3F80A2801A1FB610005FD707 /* LaunchScreen.xib */,
+				3FB9064B1A3B69B1001D7CCC /* data.plist */,
+				3F79DFA91A3FBDF1008C8A6C /* AppModel.h */,
+				3F79DFAA1A3FBDF1008C8A6C /* AppModel.m */,
 				3FCEF7021A2E7BB7009B85BC /* GroceryList.h */,
 				3FCEF7031A2E7BB7009B85BC /* GroceryList.m */,
 				3FCEF6FC1A2E6F97009B85BC /* GroceryItem.h */,
@@ -188,9 +191,6 @@
 				3FBE1DFF1A3F4583009EEA93 /* ListDetailVC.m */,
 				3FF8281E1A31149700E0E031 /* FriendTableVC.h */,
 				3FF8281F1A31149700E0E031 /* FriendTableVC.m */,
-				3FB9064B1A3B69B1001D7CCC /* data.plist */,
-				3F79DFA91A3FBDF1008C8A6C /* AppModel.h */,
-				3F79DFAA1A3FBDF1008C8A6C /* AppModel.m */,
 			);
 			path = NavProject;
 			sourceTree = "<group>";

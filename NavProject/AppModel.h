@@ -20,4 +20,7 @@
 
 +(id) sharedAppModel;
 
+-(BOOL) createNewList: (NSString *)listName;
+-(void) removeListWithName: (NSString *)listName;
+
 @end

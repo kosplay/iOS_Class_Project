@@ -7,36 +7,64 @@
 //
 
 #import "GroceryList.h"
-#import "Friend.h"
 #import "GroceryItem.h"
 
 @implementation GroceryList
 
--(void) addPayer:(Friend *)friend {
-    [self.payers addObject:friend];
+-(id) initWithListName: (NSString *)listName {
+    self = [self init];
+    self.listName = listName;
+    return self;
 }
 
--(Friend *) containsPayer:(NSString *)payerName {
-    return nil;
-}
-
--(void) removePayer:(Friend *)friend {
-    if( [self.payers containsObject:friend] ){
-        [self.payers removeObject:friend];
+-(BOOL) addPayer:(NSString *)friendName {
+    if ( ![self containsPayer:friendName] ){
+        [self.payers addObject:friendName];
+        return YES;
+    } else {
+        return NO;
     }
 }
 
--(void) addItem:(GroceryItem *)item {
-    [self.items addObject:item];
+-(BOOL) containsPayer:(NSString *)payerName {
+    if ([self.payers containsObject:payerName]) {
+        return YES;
+    }
+    return NO;
+}
+
+-(void) removePayer:(NSString *)payerName {
+    if( [self containsPayer:payerName]){
+        [self.payers removeObject:payerName];
+    }
+}
+
+-(BOOL) addItem:(NSString *)itemName ofQuantity:(float)quantity withPrice:(float)pricePerUnit {
+    if ( [self containsItem:itemName] ){
+        GroceryItem *newItem = [[GroceryItem alloc] init];
+        newItem.itemName = itemName;
+        newItem.quantity = quantity;
+        newItem.pricePerUnit = pricePerUnit;
+        [self.items addObject:newItem];
+        return YES;
+    } else {
+        return NO;
+    }
 }
 
 -(GroceryItem *) containsItem:(NSString *)itemName {
+    for (GroceryItem *anItem in self.items) {
+        if ([anItem.itemName isEqualToString:itemName]) {
+            return anItem;
+        }
+    }
     return nil;
 }
 
--(void) removeItem:(GroceryItem *)item {
-    if ( [self.items containsObject:item] ) {
-        [self.items removeObject:item];
+-(void) removeItem:(NSString *)itemName {
+    GroceryItem *anItem = [self containsItem:itemName];
+    if ( anItem != nil ) {
+        [self.items removeObject:anItem];
     }
 }
 
@@ -46,6 +74,14 @@
         totalPrice += anItem.pricePerUnit;
     }
     return totalPrice;
+}
+
+-(size_t) getNumOfItems {
+    return [self.items count];
+}
+
+-(size_t) getNumOfPayers {
+    return [self.payers count];
 }
 
 @end

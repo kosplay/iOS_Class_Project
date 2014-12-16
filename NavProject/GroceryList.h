@@ -15,6 +15,13 @@
 @property (strong, nonatomic) NSMutableArray *payers;
 @property bool foodOrder;
 
+-(id) initWithListName: (NSString *)listName;
+-(BOOL) addPayer:(NSString *)friendName;
+-(void) removePayer:(NSString *)payerName;
+-(BOOL) addItem:(NSString *)itemName ofQuantity:(float)quantity withPrice:(float)pricePerUnit;
+-(void) removeItem:(NSString *)itemName;
 -(float) getTotalPrice;
+-(size_t) getNumOfItems;
+-(size_t) getNumOfPayers;
 
 @end
