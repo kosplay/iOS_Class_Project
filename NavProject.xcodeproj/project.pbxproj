@@ -30,6 +30,7 @@
 		3F80A2B01A1FB6B7005FD707 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F80A2AF1A1FB6B7005FD707 /* SystemConfiguration.framework */; };
 		3F80A2B21A1FB6BD005FD707 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F80A2B11A1FB6BD005FD707 /* UIKit.framework */; };
 		3F80A2B41A1FD4E9005FD707 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F80A2B31A1FD4E9005FD707 /* FacebookSDK.framework */; };
+		3F89B18D1A422C0B0028681B /* skd191124sdc.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F89B18C1A422C0B0028681B /* skd191124sdc.jpg */; };
 		3FB9064C1A3B69B1001D7CCC /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3FB9064B1A3B69B1001D7CCC /* data.plist */; };
 		3FBE1E001A3F4583009EEA93 /* ListDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FBE1DFF1A3F4583009EEA93 /* ListDetailVC.m */; };
 		3FCEF6FE1A2E6F97009B85BC /* GroceryItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FCEF6FD1A2E6F97009B85BC /* GroceryItem.m */; };
@@ -40,7 +41,6 @@
 		3FF828201A31149700E0E031 /* FriendTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF8281F1A31149700E0E031 /* FriendTableVC.m */; };
 		3FF972C41A40FF38008D4CC5 /* AddItemVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF972C31A40FF38008D4CC5 /* AddItemVC.m */; };
 		3FFA60B51A41CF5D00357402 /* AddPayerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FFA60B41A41CF5D00357402 /* AddPayerVC.m */; };
-		3FFA60B71A41DAC200357402 /* skd191124sdc.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3FFA60B61A41DAC200357402 /* skd191124sdc.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +84,7 @@
 		3F80A2AF1A1FB6B7005FD707 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		3F80A2B11A1FB6BD005FD707 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3F80A2B31A1FD4E9005FD707 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		3F89B18C1A422C0B0028681B /* skd191124sdc.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = skd191124sdc.jpg; sourceTree = "<group>"; };
 		3FB9064B1A3B69B1001D7CCC /* data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = data.plist; sourceTree = "<group>"; };
 		3FBE1DFE1A3F4583009EEA93 /* ListDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListDetailVC.h; sourceTree = "<group>"; };
 		3FBE1DFF1A3F4583009EEA93 /* ListDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListDetailVC.m; sourceTree = "<group>"; };
@@ -103,7 +104,6 @@
 		3FF972C31A40FF38008D4CC5 /* AddItemVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddItemVC.m; sourceTree = "<group>"; };
 		3FFA60B31A41CF5D00357402 /* AddPayerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddPayerVC.h; sourceTree = "<group>"; };
 		3FFA60B41A41CF5D00357402 /* AddPayerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddPayerVC.m; sourceTree = "<group>"; };
-		3FFA60B61A41DAC200357402 /* skd191124sdc.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = skd191124sdc.jpg; path = ../../Desktop/skd191124sdc.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,7 +174,7 @@
 		3F80A2701A1FB610005FD707 /* NavProject */ = {
 			isa = PBXGroup;
 			children = (
-				3FFA60B61A41DAC200357402 /* skd191124sdc.jpg */,
+				3F89B18C1A422C0B0028681B /* skd191124sdc.jpg */,
 				3FFA60B21A41C06800357402 /* Controller */,
 				3FFA60B11A41C05800357402 /* Model */,
 				3F80A2751A1FB610005FD707 /* AppDelegate.h */,
@@ -335,7 +335,7 @@
 				3F80A29B1A1FB63E005FD707 /* GooglePlus.bundle in Resources */,
 				3FB9064C1A3B69B1001D7CCC /* data.plist in Resources */,
 				3F80A27F1A1FB610005FD707 /* Images.xcassets in Resources */,
-				3FFA60B71A41DAC200357402 /* skd191124sdc.jpg in Resources */,
+				3F89B18D1A422C0B0028681B /* skd191124sdc.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

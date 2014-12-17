@@ -21,9 +21,6 @@
                                 <state key="normal" title="Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="154" y="509" width="80" height="50"/>
-                                </variation>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="skd191124sdc.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Brd-GN-T41">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
@@ -80,15 +77,15 @@
                                 <exclude reference="Brd-GN-T41"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="rBX-6q-cwR"/>
+                                <exclude reference="0oc-2q-gbc"/>
+                                <exclude reference="26c-qT-2YB"/>
+                                <exclude reference="OQG-mL-fVa"/>
                                 <exclude reference="3xz-cR-dL3"/>
                                 <exclude reference="Ifs-qD-c7A"/>
                                 <exclude reference="USb-33-ZeU"/>
                                 <exclude reference="Nyx-Jd-2f9"/>
                                 <exclude reference="Wwb-6Z-Hy6"/>
-                                <exclude reference="0oc-2q-gbc"/>
-                                <exclude reference="26c-qT-2YB"/>
-                                <exclude reference="OQG-mL-fVa"/>
-                                <exclude reference="rBX-6q-cwR"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -97,15 +94,15 @@
                                 <include reference="Brd-GN-T41"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="rBX-6q-cwR"/>
+                                <include reference="0oc-2q-gbc"/>
+                                <include reference="26c-qT-2YB"/>
+                                <include reference="OQG-mL-fVa"/>
                                 <include reference="3xz-cR-dL3"/>
                                 <include reference="Ifs-qD-c7A"/>
                                 <include reference="USb-33-ZeU"/>
                                 <include reference="Nyx-Jd-2f9"/>
                                 <include reference="Wwb-6Z-Hy6"/>
-                                <include reference="0oc-2q-gbc"/>
-                                <include reference="26c-qT-2YB"/>
-                                <include reference="OQG-mL-fVa"/>
-                                <include reference="rBX-6q-cwR"/>
                             </mask>
                         </variation>
                     </view>
@@ -478,6 +475,7 @@
             <objects>
                 <tableViewController storyboardIdentifier="AddPayerVC" id="Cmh-bb-eb0" customClass="AddPayerVC" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="D4Q-Eg-lWe">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -565,6 +563,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="skd191124sdc.jpg" width="600" height="600"/>
+        <image name="skd191124sdc.jpg" width="800" height="800"/>
     </resources>
 </document>
