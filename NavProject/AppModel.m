@@ -50,11 +50,62 @@
 /** remove a friend when it is removed from a list and no list is using that friend as payer.
     @todo
 */
+-(void) removeFriendFromFriendList:(NSString *)friendName {
+    if ( [[self listsThisPayerShowUp:friendName] count] == 0) {
+        //no list is using this friend, ok to remove from friendList
+        for (Friend *amigo in self.friends) {
+            if ([amigo.name isEqualToString:friendName]) {
+                [self.friends removeObject:amigo];
+            }
+        }
+    }
+}
+
+/**
+    Not allowing directly adding a friend to friendList (self.friends) since it needs to be used in lists to show up in friendList
+ */
+
+
+/**
+    check existence of a friend in friendList (self.friends)
+ */
+-(Friend *) containsInFriendList:(NSString *)friendName {
+    for (Friend *aFriend in self.friends) {
+        if ([friendName isEqualToString:aFriend.name]) {
+            return aFriend;
+        }
+    }
+    return nil;
+}
+
+/**
+    Not allowing directly removing a friend from friendList since it might be used in some lists.
+ */
 
 
 /** add a friend to self.friends when it is added to a list but it does not exist in self.friends yet
-    @todo
 */
+-(void) addAPayerToFrindList:(NSString *)payerName {
+    Friend *aFriend = [self containsInFriendList:payerName];
+    if (aFriend == nil) {
+        aFriend = [[Friend alloc] init];
+        aFriend.name = payerName;
+        //aFriend
+    }
+}
+
+/**
+    return the listNames as an array
+ */
+-(NSArray *) listsThisPayerShowUp: (NSString *)payerName {
+    NSMutableArray *listNames = [[NSMutableArray alloc] init];
+    for (GroceryList *aList in self.lists) {
+        if ([aList containsPayer:payerName] ) {
+            [listNames addObject:aList.listName];
+        }
+    }
+    return [NSArray arrayWithArray:listNames];
+}
 
 
 /** add an item to a list 

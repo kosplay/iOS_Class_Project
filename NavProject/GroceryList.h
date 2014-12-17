@@ -16,10 +16,15 @@
 @property bool foodOrder;
 
 -(id) initWithListName: (NSString *)listName;
+
 -(BOOL) addPayer:(NSString *)friendName;
+-(BOOL) containsPayer:(NSString *)payerName;
 -(void) removePayer:(NSString *)payerName;
+
 -(BOOL) addItem:(NSString *)itemName ofQuantity:(float)quantity withPrice:(float)pricePerUnit;
+-(BOOL) containsItemBool:(NSString *)itemName;
 -(void) removeItem:(NSString *)itemName;
+
 -(float) getTotalPrice;
 -(int) getNumOfItems;
 -(int) getNumOfPayers;

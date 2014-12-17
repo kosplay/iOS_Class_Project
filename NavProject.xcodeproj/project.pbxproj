@@ -38,6 +38,7 @@
 		3FF8281A1A310C7E00E0E031 /* NotificationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF828191A310C7E00E0E031 /* NotificationVC.m */; };
 		3FF8281D1A31145A00E0E031 /* GroceryTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF8281C1A31145A00E0E031 /* GroceryTableVC.m */; };
 		3FF828201A31149700E0E031 /* FriendTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF8281F1A31149700E0E031 /* FriendTableVC.m */; };
+		3FF972C41A40FF38008D4CC5 /* AddItemVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF972C31A40FF38008D4CC5 /* AddItemVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +97,8 @@
 		3FF8281C1A31145A00E0E031 /* GroceryTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroceryTableVC.m; sourceTree = "<group>"; };
 		3FF8281E1A31149700E0E031 /* FriendTableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendTableVC.h; sourceTree = "<group>"; };
 		3FF8281F1A31149700E0E031 /* FriendTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendTableVC.m; sourceTree = "<group>"; };
+		3FF972C21A40FF38008D4CC5 /* AddItemVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddItemVC.h; sourceTree = "<group>"; };
+		3FF972C31A40FF38008D4CC5 /* AddItemVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddItemVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +192,8 @@
 				3FF8281C1A31145A00E0E031 /* GroceryTableVC.m */,
 				3FBE1DFE1A3F4583009EEA93 /* ListDetailVC.h */,
 				3FBE1DFF1A3F4583009EEA93 /* ListDetailVC.m */,
+				3FF972C21A40FF38008D4CC5 /* AddItemVC.h */,
+				3FF972C31A40FF38008D4CC5 /* AddItemVC.m */,
 				3FF8281E1A31149700E0E031 /* FriendTableVC.h */,
 				3FF8281F1A31149700E0E031 /* FriendTableVC.m */,
 			);
@@ -326,6 +331,7 @@
 				3F79DFAB1A3FBDF1008C8A6C /* AppModel.m in Sources */,
 				3F80A27A1A1FB610005FD707 /* ViewController.m in Sources */,
 				3FCEF6FE1A2E6F97009B85BC /* GroceryItem.m in Sources */,
+				3FF972C41A40FF38008D4CC5 /* AddItemVC.m in Sources */,
 				3FF828201A31149700E0E031 /* FriendTableVC.m in Sources */,
 				3F80A2771A1FB610005FD707 /* AppDelegate.m in Sources */,
 				3FCEF7011A2E7AF5009B85BC /* Friend.m in Sources */,

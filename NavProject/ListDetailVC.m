@@ -8,6 +8,8 @@
 
 #import "ListDetailVC.h"
 #import "GroceryItem.h"
+#import "AddItemVC.h"
+#import "AppDelegate.h"
 
 #define LIST_SUMMARY_SECTION 0
 #define LIST_ITEMS_SECTION 1
@@ -134,6 +136,16 @@
     return cell;
 }
 
+/*
+-(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if( indexPath.section == LIST_ITEMS_SECTION && indexPath.row == [self.list.items count]){//this is the "Add Item" row in items section
+        AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+        appDelegate.window
+        [self presentViewController:addItemVC animated:YES completion:nil];
+    }
+}
+ */
+
 
 
 // Override to support conditional editing of the table view.
@@ -209,7 +221,7 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -217,6 +229,6 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
-*/
+
 
 @end

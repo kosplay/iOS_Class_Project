@@ -52,6 +52,11 @@
     }
 }
 
+-(BOOL) containsItemBool:(NSString *)itemName {
+    bool contains = ([self containsItem:itemName]!=nil) ? YES : NO;
+    return contains;
+}
+
 -(GroceryItem *) containsItem:(NSString *)itemName {
     for (GroceryItem *anItem in self.items) {
         if ([anItem.itemName isEqualToString:itemName]) {
