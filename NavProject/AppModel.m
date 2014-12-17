@@ -48,7 +48,7 @@
 }
 
 /** remove a friend when it is removed from a list and no list is using that friend as payer.
-    @todo
+ 
 */
 -(void) removeFriendFromFriendList:(NSString *)friendName {
     if ( [[self listsThisPayerShowUp:friendName] count] == 0) {
@@ -111,10 +111,10 @@
 /** add an item to a list 
     returning a NO could mean either this item already exist therefore can not be added, or this list doesn't exist
 */
--(BOOL) addItem:(NSString *)itemName ofQuantity:(int)quantity withPrice:(float)pricePerUnit toList:(NSString *)listName {
+-(BOOL) addItem:(NSString *)itemName ofQuantity:(int)quantity withPrice:(float)pricePerUnit withItemImgURL:(NSString *)itemImgURL toList:(NSString *)listName {
     GroceryList *list = [self containListWithName:listName];
     if ( list != nil ) {
-        return [list addItem:itemName ofQuantity:quantity withPrice:pricePerUnit];
+        return [list addItem:itemName ofQuantity:quantity withPrice:pricePerUnit withItemImgURL:itemImgURL];
     } else {
         return NO;
     }

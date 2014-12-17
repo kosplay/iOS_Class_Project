@@ -7,6 +7,7 @@
 //
 
 #import "AddItemVC.h"
+#import "AppModel.h"
 
 @interface AddItemVC ()
 
@@ -25,11 +26,14 @@
 }
 
 -(IBAction)addItem:(id)sender {
-
-}
-
--(IBAction)cancelAdd:(id)sender {
-
+    //save
+    AppModel *app = [AppModel sharedAppModel];
+    [app addItem:self.itemNameView.text ofQuantity:[self.quantityView.text intValue] withPrice:[self.pricePerUnitView.text floatValue] withItemImgURL:self.itemImageURLView.text toList:self.listName];
+    
+    self.saved.hidden = NO;
+    //navigate back
+    [self.navigationController popToViewController:[self.navigationController.viewControllers objectAtIndex:1] animated:YES];
+    //app
 }
 
 /*

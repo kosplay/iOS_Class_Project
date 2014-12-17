@@ -13,8 +13,10 @@
 @property (strong, nonatomic) IBOutlet UITextField *itemNameView;
 @property (strong, nonatomic) IBOutlet UITextField *quantityView;
 @property (strong, nonatomic) IBOutlet UITextField *pricePerUnitView;
+@property (strong, nonatomic) IBOutlet UITextField *itemImageURLView;
+@property (strong, nonatomic) IBOutlet UILabel *saved;
+@property (strong, nonatomic) NSString *listName;
 
 -(IBAction)addItem:(id)sender;
--(IBAction)cancelAdd:(id)sender;
 
 @end

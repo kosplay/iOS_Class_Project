@@ -39,12 +39,13 @@
     }
 }
 
--(BOOL) addItem:(NSString *)itemName ofQuantity:(float)quantity withPrice:(float)pricePerUnit {
-    if ( [self containsItem:itemName] ){
+-(BOOL) addItem:(NSString *)itemName ofQuantity:(float)quantity withPrice:(float)pricePerUnit withItemImgURL:(NSString *)itemImgURL {
+    if ( [self containsItem:itemName] == nil ){
         GroceryItem *newItem = [[GroceryItem alloc] init];
         newItem.itemName = itemName;
         newItem.quantity = quantity;
         newItem.pricePerUnit = pricePerUnit;
+        newItem.itemImgURL = itemImgURL;
         [self.items addObject:newItem];
         return YES;
     } else {
@@ -88,5 +89,13 @@
 -(int) getNumOfPayers {
     return (int)[self.payers count];
 }
+
+/*
+-(void) getFriendSharedList:(NSString *)friendName {
+    if (<#condition#>) {
+        <#statements#>
+    }
+}
+ */
 
 @end

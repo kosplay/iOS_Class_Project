@@ -21,7 +21,7 @@
 -(BOOL) containsPayer:(NSString *)payerName;
 -(void) removePayer:(NSString *)payerName;
 
--(BOOL) addItem:(NSString *)itemName ofQuantity:(float)quantity withPrice:(float)pricePerUnit;
+-(BOOL) addItem:(NSString *)itemName ofQuantity:(float)quantity withPrice:(float)pricePerUnit withItemImgURL:(NSString *)itemImgURL;
 -(BOOL) containsItemBool:(NSString *)itemName;
 -(void) removeItem:(NSString *)itemName;
 

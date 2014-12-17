@@ -1,22 +1,21 @@
 //
-//  FriendTableVC.m
+//  AddPayerVC.m
 //  NavProject
 //
-//  Created by Student on 12/4/14.
+//  Created by Student on 12/17/14.
 //  Copyright (c) 2014 Kosplay. All rights reserved.
 //
 
-#import "FriendTableVC.h"
+#import "AddPayerVC.h"
 #import <GooglePlus/GooglePlus.h>
 #import <GoogleOpenSource/GoogleOpenSource.h>
 #import "AppModel.h"
-#import "Friend.h"
 
-@interface FriendTableVC ()
+@interface AddPayerVC ()
 
 @end
 
-@implementation FriendTableVC
+@implementation AddPayerVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -27,28 +26,15 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    //top margin so navigation bar gives some space, could be a code debt
-    UIEdgeInsets inset = UIEdgeInsetsMake(20, 0, 0, 0);
-    self.tableView.contentInset = inset;
-    
-    //load frinds from social network
-    //[self loadFriends];
-    
-    //load local friendlist from app delegate
-    //http://stackoverflow.com/questions/5244830/using-a-delegate-to-pass-data-back-up-the-navigation-stack
-    //
-    AppModel *app = [AppModel sharedAppModel];
-    //NSLog(@"%@\n", app.lists);
-    //NSLog(@"%@\n", app.friends);
-    self.friends = app.friends;
-    [self loadFriends];
-}   
+}
 
--(void) loadFriends {
-    //AppModel *app = [AppModel sharedAppModel];
+-(void) viewDidAppear:(BOOL)animated {
+    //load google+ friends and reload data
+    
+    self.loadedCircle = [[NSMutableArray alloc]init];
     GTLServicePlus *plusService = [[GTLServicePlus alloc] init];
     [plusService setAuthorizer:[GPPSignIn sharedInstance].authentication];
-        plusService.retryEnabled = YES;//This causes error. Can not be found.
+    plusService.retryEnabled = YES;//This causes error. Can not be found.
     
     GTLQueryPlus *query = [GTLQueryPlus queryForPeopleListWithUserId:@"me" collection:kGTLPlusCollectionVisible];
     [plusService executeQuery:query completionHandler:^(GTLServiceTicket *ticket, GTLPlusPeopleFeed *peopleFeed, NSError *error) {
@@ -57,15 +43,13 @@
         } else {
             //Get an array of people from GTLPlusPeopleFeed
             NSArray* peopleList = peopleFeed.items;
-            //NSLog(@"%@", peopleList);
             
             for (GTLPlusPerson *aPerson in peopleList) {
-                for ( Friend *aFriend in self.friends ){
-                    if( [aPerson.displayName isEqualToString:aFriend.name] ){
-                        aFriend.imgURL = aPerson.image.url;
-                    }
+                if (![aPerson.objectType isEqualToString:@"page"]){
+                    [self.loadedCircle addObject:aPerson];
                 }
             }
+            
             [self.tableView reloadData];
         }
     }];
@@ -85,24 +69,29 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return [self.friends count];
+    return [self.loadedCircle count];
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Friend" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"AddPayerCell" forIndexPath:indexPath];
     
     // Configure the cell...
-    Friend *friend = [self.friends objectAtIndex:indexPath.row];
-    cell.textLabel.text = friend.name;
-    if(friend.imgURL) {
-        cell.imageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:friend.imgURL]]];
-
+    GTLPlusPerson *thisPerson = [self.loadedCircle objectAtIndex:indexPath.row];
+    
+    cell.textLabel.text = thisPerson.displayName;
+    if(![thisPerson.image.url isEqual:nil] && ![thisPerson.image.url  isEqual: @""]) {
+        cell.imageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:thisPerson.image.url]]];
+        
     }
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"You shared 1 list with %@",friend.name ] ;
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    cell.accessoryType = UITableViewCellAccessoryNone;
     
     return cell;
+}
+
+-(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    GTLPlusPerson *amigo = [self.loadedCircle objectAtIndex:indexPath.row];
+    
 }
 
 

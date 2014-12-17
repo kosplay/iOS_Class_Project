@@ -13,5 +13,6 @@
 @property (strong,nonatomic) NSString *itemName;
 @property (nonatomic) double pricePerUnit;
 @property int quantity;
+@property (strong,nonatomic) NSString *itemImgURL;
 
 @end

@@ -37,6 +37,7 @@
 			</array>
 			<key>payers</key>
 			<array>
+				<string>me</string>
 				<string>Andre Belanger</string>
 			</array>
 		</dict>

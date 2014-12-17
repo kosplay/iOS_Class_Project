@@ -21,6 +21,25 @@
 +(id) sharedAppModel;
 
 -(BOOL) createNewList: (NSString *)listName;
+
 -(void) removeListWithName: (NSString *)listName;
+
+-(NSArray *) listsThisPayerShowUp: (NSString *)payerName;
+
+-(BOOL) addItem:(NSString *)itemName ofQuantity:(int)quantity withPrice:(float)pricePerUnit withItemImgURL:(NSString *)itemImgURL toList:(NSString *)listName;
+
+-(void) removeItem:(NSString *)itemName fromList:(NSString *)listName;
+
+-(BOOL) addPayer:(NSString *)payerName toList:(NSString *)listName;
+
+-(void) removePayer:(NSString *)payerName toList:(NSString *)listName;
+
+-(float) getTotalPriceFromList:(NSString *)listName;
+
+-(int) getNumOfItemsFromList:(NSString *)listName;
+
+-(int) getNumOfPayersFromList:(NSString *)listName;
+
+-(void) setFriendImgURL:(NSString *)imgURL forFriendWithName:(NSString *)friendName;
 
 @end

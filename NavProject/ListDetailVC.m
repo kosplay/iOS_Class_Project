@@ -31,6 +31,10 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
+-(void) viewDidAppear:(BOOL)animated {
+    [self.tableView reloadData];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -116,7 +120,9 @@
                 cell.textLabel.text = @"Add an Item";
             } else {
                 GroceryItem *item = [self.list.items objectAtIndex:indexPath.row];
+                cell.selectionStyle = UITableViewCellStyleSubtitle;
                 cell.textLabel.text = item.itemName;
+                cell.detailTextLabel.text = [NSString stringWithFormat:@"%$.2f", item.pricePerUnit];
             }
             break;
         }
@@ -130,21 +136,37 @@
         }
         default:
             break;
-            
     }
     
     return cell;
 }
 
-/*
 -(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if( indexPath.section == LIST_ITEMS_SECTION && indexPath.row == [self.list.items count]){//this is the "Add Item" row in items section
-        AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-        appDelegate.window
-        [self presentViewController:addItemVC animated:YES completion:nil];
+        
+        //got some help from Professor here.
+        
+        //AddItemVC *addItemVC = [[AddItemVC alloc] init];
+        //AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+        //appDelegate.window
+        //[self presentViewController:addItemVC animated:YES completion:nil];
+        
+        //use these two lines instead...
+        AddItemVC *addItemVC = [self.storyboard instantiateViewControllerWithIdentifier:@"AddItemVC"];
+        addItemVC.listName = self.list.listName;
+        addItemVC.title = @"Add Item";
+        [self.navigationController pushViewController:addItemVC animated:YES];
+        
+    }
+    
+    else if (indexPath.section == LIST_PAYERS_SECTION && indexPath.row == [self.list.payers count]) {
+        
+        AddItemVC *addItemVC = [self.storyboard instantiateViewControllerWithIdentifier:@"AddPayerVC"];
+        addItemVC.listName = self.list.listName;
+        addItemVC.title = @"Add Payer";
+        [self.navigationController pushViewController:addItemVC animated:YES];
     }
 }
- */
 
 
 
@@ -152,7 +174,8 @@
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
     // Return NO if you do not want the specified item to be editable.
     bool editable = NO;
-    if (indexPath.section  != LIST_SUMMARY_SECTION ) { //only editable when in item or payer section
+    if (indexPath.section  != LIST_SUMMARY_SECTION ) { //only editable only when in item or payer section
+        
         editable = YES;
     }
     return editable;
